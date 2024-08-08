@@ -26,7 +26,7 @@ library("dplyr")
 
 library("shape")
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 path2 = "subscripts/"
 
 ## Data for discrimination 
@@ -39,7 +39,7 @@ path2 = "subscripts/"
 #  source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 # titplot <- "MAGGIC" #" 3-year ACM"
 # figfile <- "Fig5a_M_3yr_ACMapprox_cal_rob.jpg"
-# pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+# pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 #################################################################################
