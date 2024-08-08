@@ -37,7 +37,7 @@ path2 = "subscripts/"
  source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 titplot <- "MAGGIC" #" 1-year ACM"
 figfile <- "Fig2b_M_1yr_ACMapprox_disc_HFtype.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 
