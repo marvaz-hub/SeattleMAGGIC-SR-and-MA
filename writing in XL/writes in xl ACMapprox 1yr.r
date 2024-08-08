@@ -3,7 +3,7 @@
 
 ###individual results worked out somewhere else
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 path2 = "subscripts/"
 path3 = "datasets/"
 path4 = "primary analysis/"
@@ -45,7 +45,8 @@ source(paste0(path1, path7, "cover_MAGGIC_ACM_1yr_calib.r", echo = TRUE))
 source(paste0(path1, path7, "cover_SHFM_ACM_1yr_disc.r", echo = TRUE))
 source(paste0(path1, path7, "cover_SHFM_ACM_1yr_calib.r", echo = TRUE))
  
-setwd("C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/results/")
+resultspath = # INSERT THE PATH WHERE YOU WANT TO SAVE THE TABLES WITH THE OUTPUTS
+setwd(resultspath)
 file.copy("tabletemplate.xlsx","results.xlsx", overwrite=TRUE) # Load workbook 
 wb <- loadWorkbook("results.xlsx")
 
