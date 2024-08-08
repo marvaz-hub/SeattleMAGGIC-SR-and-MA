@@ -23,7 +23,7 @@ library("XLConnect")
 
 library("dplyr")
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 path2 = "subscripts/"
 
 ## Data for discrimination 
@@ -36,7 +36,7 @@ path2 = "subscripts/"
 #  source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 # titplot <- "" #"SHFM 5-year ACM"
 # figfile <- "Fig7h_S_5yr_ACMapprox_disc_modelv.jpg"
-# pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+# pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 
