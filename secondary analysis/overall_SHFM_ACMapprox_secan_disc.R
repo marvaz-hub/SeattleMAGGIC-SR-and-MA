@@ -46,7 +46,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "SHFM" #"SHFM 2-year ACM"
 figfile <- "Fig4c_S_2yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -111,7 +111,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "SHFM" #"SHFM 3-year ACM"
 figfile <- "Fig5c_S_3yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -175,7 +175,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "SHFM" #"SHFM GT3-year ACM"
 figfile <- "Fig6c_S_GT3yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -246,7 +246,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "SHFM" #"SHFM 5-year ACM"
 figfile <- "Fig7c_S_5yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -310,7 +310,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "SHFM" #"SHFM 5-year ACM"
 figfile <- "Fig7c_S_5yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
