@@ -2,7 +2,7 @@
 ## Data for discrimination 
 
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 path2 = "subscripts/"
 path3 = "datasets/"
 
@@ -308,7 +308,8 @@ ssubs_all$disc[which(ssubs_all$theta.se.source=="Newcombe (Method 4)" & (ssubs_a
 # "toestDup"))
 # 
 # # CHANGE NAME OF FINAL FILE
-# write.csv(scovertab_disc, "C:\\Users\\mvazquezmontes\\OneDrive - Nexus365\\Documents\\SHFM and MAGGIC\\Analysis files\\RCode\\results\\SHFM_covertable_disc.csv", row.names = FALSE)
+# pathcovertable = ## INSERT THE PATH WHERE YOU WANT TO SAVE THE DATA TO CREATE THE COVER TABLE (SEE COVER PAPER BY TAYLOR ET AL.)
+# write.csv(scovertab_disc, paste0(pathcovertable, "SHFM_covertable_disc.csv"), row.names = FALSE)
 
 df_ma <- df_ma[df_ma$lineno %in% ssubs_all$lineno,]
 df_ma$disc <- ssubs_all$disc # CHANGE to cal for calibration
