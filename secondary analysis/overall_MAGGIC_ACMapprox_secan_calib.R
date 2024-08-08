@@ -46,7 +46,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "MAGGIC" #"MAGGIC 2-year ACM"
 figfile <- "Fig4b_M_2yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -113,7 +113,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "MAGGIC" #"MAGGIC 3-year ACM"
 figfile <- "Fig5b_M_3yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -179,7 +179,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "MAGGIC" #"MAGGIC GT3-year ACM"
 figfile <- "Fig6b_M_GT3yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
