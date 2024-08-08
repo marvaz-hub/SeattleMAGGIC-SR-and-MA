@@ -45,7 +45,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "SHFM" #"SHFM 2-year ACM"
 figfile <- "Fig4d_S_2yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -112,7 +112,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "SHFM" #"SHFM 3-year ACM"
 figfile <- "Fig5d_S_3yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -177,7 +177,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "SHFM" #"SHFM GT3-year ACM"
 figfile <- "Fig6d_S_GT3yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
@@ -243,7 +243,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_calib.R"))
 titplot <- "SHFM" #"SHFM 5-year ACM"
 figfile <- "Fig7d_S_5yr_ACMapprox_calib.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 
 ### create the necessary dataframes for plotting and pooling ###
