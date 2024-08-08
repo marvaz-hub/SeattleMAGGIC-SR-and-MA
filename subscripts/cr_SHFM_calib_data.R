@@ -1,7 +1,7 @@
 ## SHFM ##
 ## Data for calibration 
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 path2 = "subscripts/"
 path3 = "datasets/"
 
@@ -941,7 +941,8 @@ table(ssubs_all$S3)
 # "toestC", "toestCup"))
 # 
 # # CHANGE NAME OF FINAL FILE
-# write.csv(scovertab_cal, "C:\\Users\\mvazquezmontes\\OneDrive - Nexus365\\Documents\\SHFM and MAGGIC\\Analysis files\\RCode\\results\\SHFM_covertable_cal.csv", row.names = FALSE)
+# pathcovertable = ## INSERT THE PATH WHERE YOU WANT TO SAVE THE DATA TO CREATE THE COVER TABLE (SEE COVER PAPER BY TAYLOR ET AL.)
+# write.csv(scovertab_cal, paste0(pathcovertable, "SHFM_covertable_cal.csv"), row.names = FALSE)
 
 
 df_ma <- df_ma[df_ma$lineno %in% ssubs_all$lineno,]
