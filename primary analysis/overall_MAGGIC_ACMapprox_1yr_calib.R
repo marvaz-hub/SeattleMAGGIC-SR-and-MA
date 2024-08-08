@@ -25,7 +25,7 @@ library("dplyr")
 
 library("shape")
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 path2 = "subscripts/"
 
 ## Data for calibration 
