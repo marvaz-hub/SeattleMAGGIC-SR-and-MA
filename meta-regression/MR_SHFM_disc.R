@@ -24,7 +24,7 @@ library("dplyr")
 
 library("shape")
 
-path1 = "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/SeattleMAGGIC analysis files NEWCOVERCODES/"
+path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
 
 #################################################################################
 ### 4. Meta regression by horizon, using estimates for ACM and approx. ACM ###
