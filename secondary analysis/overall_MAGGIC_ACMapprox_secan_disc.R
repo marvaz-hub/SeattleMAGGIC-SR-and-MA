@@ -43,7 +43,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "MAGGIC" #"MAGGIC 2-year ACM"
 figfile <- "Fig4a_M_2yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
@@ -104,7 +104,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "MAGGIC" #"MAGGIC 3-year ACM"
 figfile <- "Fig5a_M_3yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
@@ -162,7 +162,7 @@ source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 source(paste0(path1, path2, "fn_forestplot_disc.R"))
 titplot <- "MAGGIC" #"MAGGIC GT3-year ACM"
 figfile <- "Fig6a_M_GT3yr_ACMapprox_disc.jpg"
-pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
