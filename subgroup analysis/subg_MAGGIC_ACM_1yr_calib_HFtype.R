@@ -27,19 +27,19 @@ library("dplyr")
 library("shape")
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for discrimination 
- source(paste0(path1, path2, "cr_MAGGIC_calib_data.R"))
+source(paste0(path1, path2, "cr_MAGGIC_calib_data.R"))
 
 ## Function to get pooled estimates for OE
- source(paste0(path1, path2, "fn_ma_oe.R"))
+source(paste0(path1, path2, "fn_ma_oe.R"))
 
 ## Function to add Q-test, I^2, and tau^2 estimate info
- source(paste0(path1, path2, "fn_forestplot_mlab.r"))
+source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 titplot <- "MAGGIC" #" 1-year ACM"
 figfile <- "Fig3b_M_1yr_ACMapprox_cal_HFtype.jpg"
-pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
+pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
 
 
 #################################################################################
@@ -47,6 +47,9 @@ pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 ### •	HF type chronic vs acute vs mixed/unclear (S1)
 #################################################################################
 table(df_ma$S1,useNA = "always")
+
+df_ma$S1[df_ma$S1=="Mixed"] <- "Unclear/Mixed"
+
 # Acute       Chronic Unclear/Mixed          <NA> 
 #   5            21             8             0 
 
@@ -94,8 +97,8 @@ table(dat3$S1, useNA = "always") #5
 # here dat has all studies
 
 oe_all <- oecalc(OE=oe.est.inter.ma, OE.cilb=oell.est.frominter, OE.ciub=oeul.est.frominter,
-                    citl=cinter_v,citl.se=cinter_SE, N=sample_n_model, E=e.est, O=o.est,
-                    data=dat, slab = study_id  )
+                 citl=cinter_v,citl.se=cinter_SE, N=sample_n_model, E=e.est, O=o.est,
+                 data=dat, slab = study_id  )
 
 # create a dataframe for forest plot
 oe_all$n      <- dat$sample_n_model
@@ -224,7 +227,7 @@ pos_pred   = -0.5
 #rows = number of rows, # validations
 
 ### set font expansion factor (as in forest() above) and use a bold font
-#op <- par(cex=1.1, font=2)
+op <- par(cex=1.1, font=2)
 
 metafor::forest(y$theta, ci.lb=y$theta.cilb,ci.ub=y$theta.ciub,
                 slab = y$id, 
@@ -246,8 +249,8 @@ par(font=4)
 
 ### add text for the subgroups (CHANGE)
 text(-0.3, c(29,21,8), pos=4,  c("Acute Heart Failure",
-                              "Chronic Heart Failure",
-                              "Unclear/Mixed Heart Failure"))
+                                 "Chronic Heart Failure",
+                                 "Unclear/Mixed Heart Failure"))
 
 ### set par back to the original settings
 par(op)
@@ -258,7 +261,7 @@ addpoly(x = resM_cal_ACM_1yr_all$est, ci.lb=resM_cal_ACM_1yr_all$ci.lb, ci.ub=re
 
 ### add summary polygons for the three subgroups (CHANGE res variables and rows for the polygon)
 addpoly(x = resM_cal_ACM_1yr_acute$est, ci.lb=resM_cal_ACM_1yr_acute$ci.lb, ci.ub=resM_cal_ACM_1yr_acute$ci.ub,
-        row=23.5, mlab=mlabfun("RE Model for Subgroup", res.hrob))
+        row=23.5, mlab=mlabfun("RE Model for Subgroup", res.acute))
 addpoly(x = resM_cal_ACM_1yr_chronic$est, ci.lb=resM_cal_ACM_1yr_chronic$ci.lb, ci.ub=resM_cal_ACM_1yr_chronic$ci.ub,
         row= 10.5, mlab=mlabfun("RE Model for Subgroup", res.chronic))
 addpoly(x = resM_cal_ACM_1yr_uncmixhf$est, ci.lb=resM_cal_ACM_1yr_uncmixhf$ci.lb, ci.ub=resM_cal_ACM_1yr_uncmixhf$ci.ub,
@@ -269,7 +272,7 @@ res <- rma(yi=theta, sei=theta.se, mods = ~ S1, data=oe_all_log, method="REML", 
 
 ### add text for the test of subgroup differences
 par(op)
-text(-0.3, -3.5, pos=4, bquote(paste("Test for Subgroup Differences: ",
+text(-0.3, -3.5, pos=4, bquote(paste("Test for Moderator Effect: ",
                                      Q[M], " = ", .(fmtx(res$QM, digits=2)),
                                      ", df = ", .(res$p - 1), ", ",
                                      .(fmtp(res$QMp, digits=3, pname="p", add0=TRUE, sep=TRUE, equal=TRUE)))))
