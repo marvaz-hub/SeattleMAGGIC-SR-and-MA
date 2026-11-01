@@ -25,19 +25,19 @@ library("XLConnect")
 library("dplyr")
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for discrimination 
- source(paste0(path1, path2, "cr_MAGGIC_disc_data.R"))
+source(paste0(path1, path2, "cr_MAGGIC_disc_data.R"))
 
 ## Function to get pooled estimates for cstat
- source(paste0(path1, path2, "fn_ma_cstat.R"))
+source(paste0(path1, path2, "fn_ma_cstat.R"))
 
 ## Function to add Q-test, I^2, and tau^2 estimate info
- source(paste0(path1, path2, "fn_forestplot_mlab.r"))
+source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 titplot <- "MAGGIC" #" 1-year ACM"
 figfile <- "Fig2a_M_1yr_ACMapprox_disc_rob.jpg"
-pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
+pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
 
 
 #################################################################################
@@ -190,7 +190,7 @@ rma.res <- fn_ma_cstat(dat)
 resM_disc_ACM_1yr_urob <- rma.res[[2]]
 res.urob <- rma.res[[3]]
 
-  
+
 #################################################################################
 ########################### Forests plot ########################################
 #################################################################################
@@ -241,8 +241,8 @@ par(font=4)
 
 ### add text for the subgroups (CHANGE)
 text(-0.3, c(34,17,6), pos=4, c("High RoB Participants",
-                               "Low RoB Participants",
-                               "Unclear RoB Participants"))
+                                "Low RoB Participants",
+                                "Unclear RoB Participants"))
 
 ### set par back to the original settings
 par(op)
@@ -264,10 +264,10 @@ res <- rma(yi=theta, sei=theta.se, mods = ~ OS1, data=cstat_all_log, method="REM
 
 ### add text for the test of subgroup differences
 par(op)
-text(-0.3, -3.5, pos=4, bquote(paste("Test for Subgroup Differences: ",
-                                              Q[M], " = ", .(fmtx(res$QM, digits=2)),
-                                              ", df = ", .(res$p - 1), ", ",
-                                              .(fmtp(res$QMp, digits=3, pname="p", add0=TRUE, sep=TRUE, equal=TRUE)))))
+text(-0.3, -3.5, pos=4, bquote(paste("Test for Moderator Effect: ",
+                                     Q[M], " = ", .(fmtx(res$QM, digits=2)),
+                                     ", df = ", .(res$p - 1), ", ",
+                                     .(fmtp(res$QMp, digits=3, pname="p", add0=TRUE, sep=TRUE, equal=TRUE)))))
 
 par(cex=1.1, font=2)
 text(c(-0.3, pos_event, pos_N, pos_CI-.33), nrow(y)+13 , pos = c(4,2,2,2) ,
