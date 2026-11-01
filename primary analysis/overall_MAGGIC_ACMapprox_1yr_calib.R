@@ -50,12 +50,12 @@ pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
-table(dat$outcome, useNA = "always") # 61
+table(dat$outcome, useNA = "always") 
 
 
 # 2) horizon
 dat <- dat[which(dat$horizon==12),]
-table(dat$horizon, useNA = "always") #32
+table(dat$horizon, useNA = "always") 
 
 
 ################################################################################################
