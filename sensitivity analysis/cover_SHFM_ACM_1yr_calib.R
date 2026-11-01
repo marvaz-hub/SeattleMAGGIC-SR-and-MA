@@ -24,7 +24,7 @@ library("XLConnect")
 library("shape")
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for calibration 
 source(paste0(path1, path2, "cr_SHFM_calib_data.R"))
@@ -42,13 +42,15 @@ source(paste0(path1, path2, "fn_ma_oe.R"))
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
-table(dat$outcome, useNA = "always") 
+table(dat$outcome, useNA = "always") #34 ACM; 6 approx ACM
 
 
 # 2)  horizon
 dat <- dat[which(dat$horizon==12),]
 
 table(dat$horizon, useNA = "always") #28
+
+table(dat$authoryear, useNA = "always")
 
 
 ### 3) 6 sensitivity analyses for SHFM (4 for MAGGIC) (+ 1 sensitivity analysis: exclude internal validation results)
@@ -94,11 +96,32 @@ dim(dat6) #27
 #Levy 2006 PRAISE1 lineno 83 12 months outcome 5
 dat7 <- dat[which(dat$int_valid!="O2"),]
 
+# Extra sensitivity analysis in response to SR journal reviewers' comments (15/02/2026)
+# 8. Exclude approximated ACM (outc==”E6”). 
+#  dat[which(dat$outc=="E6"),]
+#Levy 2006 PRAISE1 lineno 83 12 months outcome 5
+#Levy_5 2006 RENNAISANCE lineno 101 12 months outcome 5
+dat8 <- dat[which(dat$outc!="E6"),]
 
+
+### NEW October 2026
+### 9) Sensitivity analysis based on PROBAST's Applicability concern (app_overall_s)
+table(dat$app_overall_s, useNA = "always")
+# high     low unclear    <NA> 
+#   6      15       7       0 
+# 9a.Exclude estimates with high Applicability concern 
+dat9a <- dat[which(dat$app_overall_s!="high"),]
+dim(dat9a) #22
+# 9b.Exclude estimates with high and unclear Applicability concern
+dat9b <- dat[which(dat$app_overall_s=="low"),]
+dim(dat9b) #15
+# 9c.Exclude estimates with high and unclear Applicability concern, and Haga2012
+dat9c <- dat[which(dat$app_overall_s!="high" & dat$author!="Haga"),]
+dim(dat9c) #21
 
 
 ################################################################################################
-###########     GROUP 1 #############
+###########     SA 1 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -123,7 +146,7 @@ dat7 <- dat[which(dat$int_valid!="O2"),]
 resS_cal_ACM_1yr_cover1 <- c(rep("-",5), 2, "-") 
 
 ################################################################################################
-###########     GROUP 2  #############
+###########     SA 2  #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -147,7 +170,7 @@ resS_cal_ACM_1yr_cover2 <- fn_ma_oe(dat)[[2]]
 
 
 ################################################################################################
-###########     GROUP 3 #############
+###########     SA 3 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -173,7 +196,7 @@ resS_cal_ACM_1yr_cover3 <- c(rep("-",5), 0, "-")
 
 
 ################################################################################################
-###########     GROUP 4 #############
+###########     SA 4 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -198,7 +221,7 @@ resS_cal_ACM_1yr_cover3 <- c(rep("-",5), 0, "-")
 resS_cal_ACM_1yr_cover4 <- c(rep("-",5), 0, "-") 
 
 ################################################################################################
-###########     GROUP 5  #############
+###########     SA 5  #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -221,7 +244,7 @@ plot(oe_all_forest)
 resS_cal_ACM_1yr_cover5 <- fn_ma_oe(dat)[[2]]
 
 ################################################################################################
-###########     GROUP 6 #############
+###########     SA 6 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -244,7 +267,7 @@ plot(oe_all_forest)
 resS_cal_ACM_1yr_cover6 <- fn_ma_oe(dat)[[2]]
 
 ################################################################################################
-###########     GROUP 7  #############
+###########     SA 7  #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -265,3 +288,99 @@ plot(oe_all_forest)
 
 # funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
 resS_cal_ACM_1yr_cover7 <- fn_ma_oe(dat)[[2]]
+
+
+
+################################################################################################
+###########     SA 8  ############# (15/01/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat8
+
+# create dataframe/list with all oe estimates and recalculated 95%-CIs
+oe_all <- oecalc(OE=oe.est.inter.ma, OE.cilb=oell.est.frominter, OE.ciub=oeul.est.frominter,
+                 citl=cinter_v,citl.se=cinter_SE, N=sample_n_model, E=e.est, O=o.est,
+                 data=dat, slab = study_id  )
+# create a dataframe for forest plot
+oe_all$n      <- dat$sample_n_model
+oe_all$events <- dat$o.est
+oe_all$id     <- dat$authoryear
+oe_all_forest <- oe_all[which(!is.na(oe_all$theta.se)),]
+dim(oe_all_forest) ## 18,9
+plot(oe_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+resS_cal_ACM_1yr_cover8 <- fn_ma_oe(dat)[[2]]
+
+
+################################################################################################
+###########     SA 9a  ############# (25/10/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat9a
+
+# create dataframe/list with all oe estimates and recalculated 95%-CIs
+oe_all <- oecalc(OE=oe.est.inter.ma, OE.cilb=oell.est.frominter, OE.ciub=oeul.est.frominter,
+                 citl=cinter_v,citl.se=cinter_SE, N=sample_n_model, E=e.est, O=o.est,
+                 data=dat, slab = study_id  )
+# create a dataframe for forest plot
+oe_all$n      <- dat$sample_n_model
+oe_all$events <- dat$o.est
+oe_all$id     <- dat$authoryear
+oe_all_forest <- oe_all[which(!is.na(oe_all$theta.se)),]
+dim(oe_all_forest) ## 18,9
+plot(oe_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+resS_cal_ACM_1yr_cover9a <- fn_ma_oe(dat)[[2]]
+
+
+################################################################################################
+###########     SA 9b  ############# (25/10/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat9b
+
+# create dataframe/list with all oe estimates and recalculated 95%-CIs
+oe_all <- oecalc(OE=oe.est.inter.ma, OE.cilb=oell.est.frominter, OE.ciub=oeul.est.frominter,
+                 citl=cinter_v,citl.se=cinter_SE, N=sample_n_model, E=e.est, O=o.est,
+                 data=dat, slab = study_id  )
+# create a dataframe for forest plot
+oe_all$n      <- dat$sample_n_model
+oe_all$events <- dat$o.est
+oe_all$id     <- dat$authoryear
+oe_all_forest <- oe_all[which(!is.na(oe_all$theta.se)),]
+dim(oe_all_forest) ## 18,9
+plot(oe_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+resS_cal_ACM_1yr_cover9b <- fn_ma_oe(dat)[[2]]
+
+################################################################################################
+###########     SA 9  ############# (25/10/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat9c
+
+# create dataframe/list with all oe estimates and recalculated 95%-CIs
+oe_all <- oecalc(OE=oe.est.inter.ma, OE.cilb=oell.est.frominter, OE.ciub=oeul.est.frominter,
+                 citl=cinter_v,citl.se=cinter_SE, N=sample_n_model, E=e.est, O=o.est,
+                 data=dat, slab = study_id  )
+# create a dataframe for forest plot
+oe_all$n      <- dat$sample_n_model
+oe_all$events <- dat$o.est
+oe_all$id     <- dat$authoryear
+oe_all_forest <- oe_all[which(!is.na(oe_all$theta.se)),]
+dim(oe_all_forest) ## 18,9
+plot(oe_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+resS_cal_ACM_1yr_cover9c <- fn_ma_oe(dat)[[2]]
