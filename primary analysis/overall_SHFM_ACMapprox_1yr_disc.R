@@ -56,7 +56,7 @@ table(dat$outcome, useNA = "always")
 
 # 2) horizon
 dat <- dat[which(dat$horizon==12),]
-table(dat$horizon, useNA = "always") #34
+table(dat$horizon, useNA = "always") 
 
 #################################################################################
 # create dataframe/list with all cstats and recalculated 95%-CIs
@@ -71,7 +71,7 @@ cstat_all$n      <- dat$sample_n_model
 cstat_all$events <- round(dat$o.est,0)
 cstat_all$id     <- dat$authoryear
 cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
-dim(cstat_all_forest) ## 34
+dim(cstat_all_forest) 
 # plot(cstat_all_forest)
 
 
@@ -94,11 +94,3 @@ res <- fn_ma_cstat(dat)[[3]]
 #png(paste0(pathfig, figfile), width = 1100, height = 900)
 fn_forest_disc(cstat_all_forest,estimates,titplot,weights_all,tau_all,res)
 #dev.off()
-
-
- 
- 
-
-
-
-
