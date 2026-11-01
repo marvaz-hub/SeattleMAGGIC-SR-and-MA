@@ -24,7 +24,7 @@ library("XLConnect")
 library("dplyr")
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for discrimination 
 source(paste0(path1, path2, "cr_MAGGIC_disc_data.R"))
@@ -52,7 +52,7 @@ table(dat$horizon, useNA = "always") #23
 # 3) 4 sensitivity analyses (E3 and E4 should be ignored in all sensitivity analyses) (+ 1 sensitivity analysis: exclude internal validation results)
 # 1. Exclude estimates with high ROB on any domain (O1)
 table(dat$anyhighROB) 
-# - O1 
+# - E1 
 # 5 18
 
 dat1 <- dat[which(dat$anyhighROB!="O1"),]
@@ -84,9 +84,20 @@ dat[(dat$lineno==70 | dat$author=="Pocock"|dat$year==2013), c("author","year","l
 #Pocock 2013 did not contribute with internal discrimination data
 
 
+### NEW October 2026
+### 6) Sensitivity analysis based on PROBAST's Applicability concern (app_overall)
+table(dat$app_overall, useNA = "always")
+# High     Low Unclear    <NA> 
+#   7      14       2       0 
+# 6a.Exclude estimates with high Applicability concern 
+dat6a <- dat[which(dat$app_overall!="High"),]
+dim(dat6a) #16
+# 6b.Exclude estimates with high and unclear Applicability concern
+dat6b <- dat[which(dat$app_overall=="Low"),]
+dim(dat6b) #14
 
 ################################################################################################
-###########     GROUP 1 #############
+###########     SA 1 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -110,7 +121,7 @@ plot(cstat_all_forest)
 
 
 ################################################################################################
-###########     GROUP 2 #############
+###########     SA 2 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -134,7 +145,7 @@ plot(cstat_all_forest)
 
 
 ################################################################################################
-###########     GROUP 3 #############
+###########     SA 3 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -158,7 +169,7 @@ plot(cstat_all_forest)
 
 
 ################################################################################################
-###########     GROUP 4 #############
+###########     SA 4 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -178,4 +189,56 @@ dim(cstat_all_forest) ## 9 9
 plot(cstat_all_forest)
 
 # funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
-(resM_disc_ACM_1yr_cover4 <- fn_ma_cstat(dat)[[2]])  
+(resM_disc_ACM_1yr_cover4 <- fn_ma_cstat(dat)[[2]])
+
+################################################################################################
+###########     SA 5 #############
+################################################################################################
+
+## There is no data for this SA
+
+################################################################################################
+###########     SA 6a #############
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat6a 
+
+cstat_all <- ccalc(cstat= extva_dis_cstat_val, cstat.se= extva_dis_cstat_se, 
+                   cstat.cilb=extva_dis_cstat_lci, cstat.ciub = extva_dis_cstat_uci,
+                   N = sample_n_model, O = o.est, data=dat, slab=study_id)
+
+# create a dataframe for forest plot
+cstat_all$n      <- dat$sample_n_model
+cstat_all$events <- round(dat$o.est,0)
+cstat_all$id     <- dat$authoryear
+cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
+dim(cstat_all_forest) ## 9 9
+plot(cstat_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+(resM_disc_ACM_1yr_cover6a <- fn_ma_cstat(dat)[[2]])  
+
+################################################################################################
+###########     SA 6b #############
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat6b 
+
+cstat_all <- ccalc(cstat= extva_dis_cstat_val, cstat.se= extva_dis_cstat_se, 
+                   cstat.cilb=extva_dis_cstat_lci, cstat.ciub = extva_dis_cstat_uci,
+                   N = sample_n_model, O = o.est, data=dat, slab=study_id)
+
+# create a dataframe for forest plot
+cstat_all$n      <- dat$sample_n_model
+cstat_all$events <- round(dat$o.est,0)
+cstat_all$id     <- dat$authoryear
+cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
+dim(cstat_all_forest) ## 9 9
+plot(cstat_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+(resM_disc_ACM_1yr_cover6b <- fn_ma_cstat(dat)[[2]])
