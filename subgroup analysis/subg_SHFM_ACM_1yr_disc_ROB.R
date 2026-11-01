@@ -26,19 +26,19 @@ library("dplyr")
 
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for discrimination 
- source(paste0(path1, path2, "cr_SHFM_disc_data.R"))
+source(paste0(path1, path2, "cr_SHFM_disc_data.R"))
 
 ## Function to get pooled estimates for cstat
- source(paste0(path1, path2, "fn_ma_cstat.R"))
+source(paste0(path1, path2, "fn_ma_cstat.R"))
 
 ## Function to add Q-test, I^2, and tau^2 estimate info
- source(paste0(path1, path2, "fn_forestplot_mlab.r"))
+source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 titplot <- "SHFM" #" 1-year ACM"
 figfile <- "Fig2e_S_1yr_ACMapprox_disc_rob.jpg"
-pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURE
+pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
 
 
 #################################################################################
@@ -61,8 +61,8 @@ table(df_ma$OS1,useNA = "always")
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
 table(dat$outcome, useNA = "always")
-  # 1    5    9 <NA> 
-  # 57    4    1    0 
+# 1    5    9 <NA> 
+# 57    4    1    0 
 
 
 # 2) horizon
@@ -271,7 +271,7 @@ res <- rma(yi=theta, sei=theta.se, mods = ~ OS1, data=cstat_all_log, method="REM
 
 ### add text for the test of subgroup differences
 par(op)
-text(-0.3, -3.5, pos=4, bquote(paste("Test for Subgroup Differences: ",
+text(-0.3, -3.5, pos=4, bquote(paste("Test for Moderator Effect:",
                                      Q[M], " = ", .(fmtx(res$QM, digits=2)),
                                      ", df = ", .(res$p - 1), ", ",
                                      .(fmtp(res$QMp, digits=3, pname="p", add0=TRUE, sep=TRUE, equal=TRUE)))))
