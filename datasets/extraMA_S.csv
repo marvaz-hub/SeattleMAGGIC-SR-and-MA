@@ -1,0 +1,165 @@
+lineno,author,year,outcome,data_name,horizon,inclC,inclD
+1,Aaronson,2020,6,REVIVAL,12,Exclude,Include
+2,Adlbrecht,2013,1,Medical University of Vienna,53.400002,Exclude,Include
+3,Agha,2009,9,Emory University Hospital,28.799999,Exclude,Include
+4,Ahmad,2023,1,Northwestern Medicine Enterprise Data Warehouse (NMEDW),12,Include,Include
+5,Allen,2008,1,Duke University Heart Failure Disease Management Program,12,Exclude,Exclude
+6,Allen,2008,1,Duke University Heart Failure Disease Management Program,36,Exclude,Include
+7,Anker,2019,1,CCM-REG,36,Exclude,Include
+8,Arutyunov,2013,1,City Clinical  Hospital No. 4 Register,12,Include,Exclude
+9,Arzilli,2018,1,"A tertiary referral hospital in Pisa, Italy",12,Exclude,Include
+10,Assmus,2016,1,Goethe University in Frankfurt,12,Include,Exclude
+11,Assmus,2016,1,Goethe University in Frankfurt,24,Include,Exclude
+12,Assmus,2016,1,Goethe University in Frankfurt,36,Include,Exclude
+13,Avula,2020,1,Saint Joseph Mercy Hospital,12,Exclude,Include
+14,Bakitas,2013,1,Dartmouth-Hitchcock Medical Center (DHMC),12,Exclude,Exclude
+15,Benbarkat,2012,1,"Jewish General Hospital, Montreal",12,Exclude,Exclude
+16,Blum,2022,1,WISDOM study,12,Include,Include
+17,Bo,2023,1,"Fourth Peopleâs Hospital of Zigong, Sichuan,",12,Exclude,Include
+18,Buchan,2020,1,Peter Munk Cardiac Centre,12,Exclude,Exclude
+19,Canepa,2018,1,ESC Heart Failure Long Term Registry,12,Include,Include
+20,Cheng,2021,1,Beijing Hospital,36.200001,Include,Include
+21,Chyu,2014,6,"AhmansonâUniversity of California, Los Angeles (UCLA) Cardiomyopathy Center",60,Exclude,Include
+22,Clemens,2012,1,Kenezy Hospital and University of Debrecen,12,Exclude,Exclude
+23,Clemens,2012,1,Kenezy Hospital and University of Debrecen,24,Exclude,Exclude
+24,Codina,2021,1,REGI-UNIC,12,Include,Include
+25,Codina,2021,1,REGI-UNIC,24,Exclude,Include
+26,Codina,2021,1,REGI-UNIC,36,Exclude,Include
+27,Codina,2021,1,REGI-UNIC,48,Exclude,Include
+28,Codina,2021,1,REGI-UNIC,60,Exclude,Include
+29,Cornelissen,2021,1,University Hospital Aachen,12,Exclude,Include
+30,Dardas,2015,5,HF-ACTION,12,Exclude,Include
+31,Dardas,2015,5,HF-ACTION,36,Exclude,Exclude
+32,DeMazumder,2016,8,PROSE-ICD,45,Exclude,Include
+33,Domae,2021,1,"Osaka University Graduate School of Medicine,",12,Include,Exclude
+34,Domae,2021,1,"Osaka University Graduate School of Medicine,",36,Exclude,Exclude
+35,Domae,2021,1,"Osaka University Graduate School of Medicine,",60,Exclude,Exclude
+36,Estep,2015,1,ROADMAP - LVAD cohort,12,Include,Exclude
+37,Freitas,2017,1,Hospital de Santa Cruz,12,Exclude,Include
+38,Freitas,2017,1,Hospital de Santa Cruz,24,Exclude,Include
+39,Freitas,2017,2,Hospital de Santa Cruz,12,Exclude,Exclude
+40,Freitas,2017,2,Hospital de Santa Cruz,24,Exclude,Exclude
+41,Freitas,2017,9,Hospital de Santa Cruz,12,Exclude,Exclude
+42,Freitas,2017,9,Hospital de Santa Cruz,24,Exclude,Exclude
+43,Freudenberger,2016,1,WARCEF,12,Exclude,Include
+44,Fu,2015,1,Chinese Peopleâs Liberation Army General Hospital,15.6,Exclude,Include
+45,Gama,2023,2,"Hospital Santa Cruz, Centro Hospitalar Lisboa Ocidental, Canraxide, Portugal",24,Exclude,Include
+46,Gama,2023,6,"Hospital Santa Cruz, Centro Hospitalar Lisboa Ocidental, Canraxide, Portugal",24,Exclude,Exclude
+47,Giamouzis,2009,6,Emory University,12,Exclude,Include
+48,Giamouzis,2009,6,Emory University,24,Exclude,Include
+49,Giamouzis,2009,6,Emory University,36,Exclude,Include
+50,Goda,2011,6,Columbia University Medical Center for heart transplant evaluation,24,Exclude,Include
+51,Gorodeski_1,2010,6,"Cleveland Clinic, listed for HTx",12,Exclude,Include
+52,Gorodeski_1,2010,6,"Cleveland Clinic, listed for HTx",24,Exclude,Include
+53,Gorodeski_2,2010,1,"Cleveland Clinic, not suitable for HTx (not listed)",12,Exclude,Include
+54,Gorodeski_2,2010,1,"Cleveland Clinic, not suitable for HTx (not listed)",24,Exclude,Include
+55,Gorodeski_2,2010,6,"Cleveland Clinic, not suitable for HTx (not listed)",12,Exclude,Exclude
+56,Gorodeski_2,2010,6,"Cleveland Clinic, not suitable for HTx (not listed)",24,Exclude,Exclude
+57,Haga,2012,1,Royal Infirmary of Edinburgh,12,Include,Include
+58,Honold,2013,1,J.W. Goethe University,12,Include,Exclude
+59,Honold,2013,1,J.W. Goethe University,48,Exclude,Include
+60,Hussain,2014,1,Armed Force Instiute of Cardiology,12,Exclude,Include
+61,Imamura,2012,1,University of Tokyo Hospital,12,Exclude,Include
+62,Kalogeropoulos,2009,1,Emory University,12,Include,Exclude
+63,Kalogeropoulos,2009,1,Emory University,24,Exclude,Exclude
+64,Kalogeropoulos,2009,1,Emory University,36,Exclude,Exclude
+65,Kalogeropoulos,2009,1,Emory University,48,Exclude,Exclude
+66,Kalogeropoulos,2009,1,Emory University,60,Exclude,Exclude
+67,Kalogeropoulos,2009,6,Emory University,12,Exclude,Exclude
+68,Kalogeropoulos,2009,6,Emory University,24,Exclude,Exclude
+69,Kalogeropoulos,2009,6,Emory University,36,Exclude,Exclude
+70,Kalogeropoulos,2009,6,Emory University,48,Exclude,Exclude
+71,Kalogeropoulos,2009,6,Emory University,60,Exclude,Exclude
+72,Kao_1,2012,1,BEST,12,Exclude,Include
+73,Kao_2,2012,1,MOCHA,12,Exclude,Include
+74,Ketchum,2010,1,University of Washington,12,Exclude,Exclude
+75,Kloppe,2016,1,Residents of Bochum or Ludenscheid,12,Exclude,Exclude
+76,Krasnova,2012,1,Residents of St. Petersburg,12,Exclude,Exclude
+77,Krasnova,2012,1,Residents of St. Petersburg,24,Exclude,Exclude
+78,Krasnova,2012,1,Residents of St. Petersburg,60,Exclude,Exclude
+79,Lanfear,2017,1,ROADMAP - OMM cohort,12,Include,Include
+80,Laszczynska,2014,1,Centro Hospitalar de Sao Joao,12,Include,Include
+81,Laszczynska,2014,1,Centro Hospitalar de Sao Joao,36,Exclude,Include
+82,Laszczynska,2014,1,Centro Hospitalar de Sao Joao,60,Exclude,Include
+83,Levy,2006,5,PRAISE1,12,Include,Include
+84,Levy,2006,5,PRAISE1,24,Include,Exclude
+85,Levy,2012,6,"Columbia Presbyterian Medical Center (n=647,1990 to 2006); University of Michigan (n=498, 1993 to 2001); and University of Washington (n=91,1999 to 2001)",12,Exclude,Include
+86,Levy,2012,6,"Columbia Presbyterian Medical Center (n=647,1990 to 2006); University of Michigan (n=498, 1993 to 2001); and University of Washington (n=91,1999 to 2001)",48,Exclude,Exclude
+87,Levy,2018,1,SCD-HeFT,54.599998,Exclude,Exclude
+88,Levy_1,2006,1,ELITE 2,12,Include,Include
+89,Levy_1,2006,1,ELITE 2,24,Include,Exclude
+90,Levy_1,2009,1,REMATCH - all,12,Exclude,Exclude
+91,Levy_2,2006,1,Val-HeFT,12,Include,Include
+92,Levy_2,2006,1,Val-HeFT,24,Include,Exclude
+93,Levy_2,2006,1,Val-HeFT,36,Include,Exclude
+94,Levy_2,2009,1,REMATCH - medical therapy,12,Include,Include
+95,Levy_3,2006,1,In-CHF,12,Include,Include
+96,Levy_3,2009,1,REMATCH - LVAD,12,Include,Exclude
+97,Levy_4,2006,5,University of Washington,12,Include,Include
+98,Levy_4,2006,5,University of Washington,24,Include,Exclude
+99,Levy_4,2006,5,University of Washington,36,Include,Exclude
+100,Levy_5,2006,5,RENNAISANCE,12,Include,Include
+101,Levy_5,2006,5,RENNAISANCE,24,Include,Exclude
+102,Li,2019,1,Hospital Clínico Universitario de Valencia,12,Include,Include
+103,Li,2019,1,Hospital ClÃ­nico Universitario de Valencia,24,Exclude,Exclude
+104,Li,2019,1,Hospital ClÃ­nico Universitario de Valencia,36,Exclude,Exclude
+105,Li,2019,1,Hospital ClÃ­nico Universitario de Valencia,48,Exclude,Exclude
+106,Li,2019,1,Hospital ClÃ­nico Universitario de Valencia,60,Exclude,Exclude
+107,May,2007,5,"Cardiac catheterization registry of the Intermountain Heart Collaborative Study, patients from LDS Hospital",12,Exclude,Include
+108,May,2007,5,"Cardiac catheterization registry of the Intermountain Heart Collaborative Study, patients from LDS Hospital",24,Exclude,Include
+109,May,2007,5,"Cardiac catheterization registry of the Intermountain Heart Collaborative Study, patients from LDS Hospital",36,Exclude,Include
+110,May,2007,5,"Cardiac catheterization registry of the Intermountain Heart Collaborative Study, patients from LDS Hospital",60,Exclude,Include
+111,McGranaghan,2021,1,CIBIS-ELD,36,Exclude,Include
+162,Miyagawa,2019,1,OSCAR,12,Exclude,Exclude
+163,Miyagawa,2019,1,OSCAR,36,Exclude,Exclude
+112,Miyagawa,2019,1,OSCAR,60,Include,Include
+113,Muser,2019,2,Hospital of the University of Pennsylvania,12,Exclude,Exclude
+114,Nakayama,2011,5,Tohoku University Graduate School of Medicine,12,Include,Include
+115,Nakayama,2011,5,Tohoku University Graduate School of Medicine,24,Include,Include
+116,Nakayama,2011,5,Tohoku University Graduate School of Medicine,36,Include,Include
+117,Nguyen,2018,1,PitiÃ© SalpÃ©triÃ¨re university hospital,12,Exclude,Include
+118,Nozaki,2020,1,Kitasato University Hospital,60,Exclude,Include
+119,Nutter,2010,1,"Advocate Christ Medical Center, University of Illinois",12,Exclude,Exclude
+120,Nutter,2010,1,"Advocate Christ Medical Center, University of Illinois",24,Exclude,Exclude
+121,Nutter,2010,1,"Advocate Christ Medical Center, University of Illinois",60,Exclude,Exclude
+122,Pamboukian,2012,1,University of Alabama at Birmingham and UW?,12,Include,Exclude
+123,Pavlovskaya,2023,2,"Almazov National Medical Research Centre, Russia",12,Exclude,Exclude
+124,Pavlovskaya,2023,2,"Almazov National Medical Research Centre, Russia",24,Exclude,Exclude
+125,Pavlovskaya,2023,2,"Almazov National Medical Research Centre, Russia",60,Exclude,Exclude
+126,Perrotta,2012,9,"University of Florence; Catholic University of Sacred Heart, Rome; Fondazione Monasterio, Pisa; Gavazzeni Hospital, Bergamo",12,Include,Include
+127,Perrotta,2012,9,"University of Florence; Catholic University of Sacred Heart, Rome; Fondazione Monasterio, Pisa; Gavazzeni Hospital, Bergamo",24,Include,Include
+128,Perrotta,2012,9,"University of Florence; Catholic University of Sacred Heart, Rome; Fondazione Monasterio, Pisa; Gavazzeni Hospital, Bergamo",60,Include,Include
+129,Pfister,2008,7,University Hospital of Cologne,12,Exclude,Include
+130,Regoli,2013,1,"Fondazione Cardiocentro Ticino, Good Hope Hospital, Fondazione IRCCS Policlinico San Matteo, Istituto Clinico Humanitas and Presidio Ospedaliero ASL Roma B Policlinico Casilino",12,Exclude,Exclude
+131,Regoli,2013,1,"Fondazione Cardiocentro Ticino, Good Hope Hospital, Fondazione IRCCS Policlinico San Matteo, Istituto Clinico Humanitas and Presidio Ospedaliero ASL Roma B Policlinico Casilino",24,Exclude,Exclude
+132,Regoli,2013,1,"Fondazione Cardiocentro Ticino, Good Hope Hospital, Fondazione IRCCS Policlinico San Matteo, Istituto Clinico Humanitas and Presidio Ospedaliero ASL Roma B Policlinico Casilino",60,Exclude,Exclude
+133,Rich,2018,1,Northwestern University HFpEF Program,12,Include,Exclude
+134,Rich,2018,1,Northwestern University HFpEF Program,43.200001,Exclude,Include
+135,Rodrigues_1,2023,1,"Cardiology Department, Santa Maria University Hospital",12,Exclude,Exclude
+136,Rodrigues_2,2023,1,"Cardiology Department, Santa Maria University Hospital",12,Include,Include
+137,Rosenbaum,2014,1,University of Minnesota,12,Include,Exclude
+138,Rosenbaum,2014,1,University of Minnesota,24,Exclude,Exclude
+139,Rosenbaum,2014,1,University of Minnesota,36,Exclude,Exclude
+164,Rosenbaum,2014,1,University of Minnesota,60,Exclude,Exclude
+140,Schau,2011,1,Heart Center Brandenburg in Bernau,12,Exclude,Exclude
+141,Schau,2016,1,Heart Center Brandenburg in Bernau,12,Exclude,Exclude
+142,Schau,2016,1,Heart Center Brandenburg in Bernau,24,Exclude,Exclude
+143,Scrutinio,2014,1,"S. Maugeri” Foundation, Istituto di Ricovero e Cura a Carattere Scientific (IRCCS)",12,Include,Include
+144,Shiraishi,2019,10,WET-HF and NaDEF databases,12,Exclude,Include
+145,Szczurek-Wasilewicz,2022,5,Silesian Centre for Heart Disease,12,Exclude,Include
+146,Szlacheta,2023,1,"Bytom University Hospital, Poland - registry of HF patients",60,Exclude,Include
+147,Takahama,2023,10,"National Cerebral and Cardiovascular Center, Japan",12,Exclude,Exclude
+148,Tohyama,2021,1,JROADHF,12,Include,Include
+149,Tokodi,2020,1,Heart and Vascular Center of Semmelweis University,12,Exclude,Include
+150,Tokodi,2020,1,Heart and Vascular Center of Semmelweis University,24,Exclude,Include
+151,Tokodi,2020,1,Heart and Vascular Center of Semmelweis University,36,Exclude,Include
+152,Tokodi,2020,1,Heart and Vascular Center of Semmelweis University,48,Exclude,Include
+153,Tokodi,2020,1,Heart and Vascular Center of Semmelweis University,60,Exclude,Include
+154,Ulloa Cerna,2021,1,"Heart and Vascular Center, Evangelical Hospital, Lewisburg and Heart Institute, Geisinger",12,Exclude,Include
+155,Vishram-Nielsen,2020,1,Toronto General Hospital,12,Include,Include
+156,Vishram-Nielsen,2020,1,Toronto General Hospital,36,Exclude,Include
+157,Vishram-Nielsen,2020,5,Toronto General Hospital,12,Exclude,Exclude
+158,Vishram-Nielsen,2020,5,Toronto General Hospital,36,Exclude,Include
+159,Vollmert,2020,1,University Hospital of Cologne,48,Exclude,Exclude
+160,Williams,2018,1,Geisinger Health System,12,Exclude,Exclude
+161,Zafrir,2012,1,"Lin Medical Center, Haifa",25,Include,Include

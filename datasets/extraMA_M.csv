@@ -1,0 +1,107 @@
+lineno,author,year,outcome,data_name,horizon,NotMA,inclC,inclD
+1,Ahmad,2023,1,Northwestern Medicine Enterprise Data Warehouse (NMEDW),12,0,Include,Include
+2,Alba,2023,1,Tertary clinics in Canada,12,0,Exclude,Include
+3,Alba,2023,5,Tertary clinics in Canada,12,0,Include,Exclude
+4,Alvarez-Garcia,2021,1,REDINSCOR II study,12,0,Exclude,Include
+5,Barge-Caballero,2019,1,Complejo Hospitalario Universitario de A Corun˜a (CHUAC),12,0,Include,Include
+6,Barge-Caballero,2019,1,Complejo Hospitalario Universitario de A Corun˜a (CHUAC),36,0,Include,Include
+7,Blanco,2023,1,BAT-HFrEF registry,12,0,Include,Exclude
+8,Blanco,2023,1,BAT-HFrEF registry,36,0,Include,Exclude
+9,Bo,2023,1,"Fourth People’s Hospital of Zigong, Sichuan",12,0,Include,Include
+10,Buchan,2020,1,Peter Munk Cardiac Centre,12,1,Exclude,Exclude
+11,Cai,2022,1,Guangdong Provincial Peopleâs Hospital,12,1,Exclude,Exclude
+12,Cai,2022,1,Guangdong Provincial Peopleâs Hospital,36,1,Exclude,Exclude
+13,Canepa,2018,1,ESC HF Long Term registry,12,0,Include,Include
+14,Canepa,2019,1,GISSI-HF,36,0,Include,Include
+15,Cheng,2021,1,Beijing Hospital,12,0,Include,Include
+16,Chirinos,2020,11,TOPCAT,33,0,Exclude,Include
+17,Chirinos_1,2022,1,TOPCAT,34.799999,0,Exclude,Include
+18,Chirinos_1,2022,11,TOPCAT,31.200001,0,Exclude,Include
+19,Chirinos_2,2022,1,Penn HF Study,52.799999,0,Exclude,Include
+20,Chirinos_2,2022,11,Penn HF Study,43.200001,0,Exclude,Include
+21,Chirinos_3,2022,1,PEOPLE cohort subgroup,20.4,0,Exclude,Include
+22,Chirinos_3,2022,11,PEOPLE cohort subgroup,18,0,Exclude,Include
+23,Chirinos_4,2022,1,University of Penn and Philadelphia Veterans Affairs Hospital,51.599998,0,Exclude,Include
+24,Chirinos_4,2022,11,University of Penn and Philadelphia Veterans Affairs Hospital,45.599998,0,Exclude,Include
+25,Chirinos_5,2022,1,Donostia and Navarra cohort (LeizarÃ¡n),58.799999,0,Exclude,Include
+26,Chirinos_5,2022,11,Donostia and Navarra cohort (LeizarÃ¡n),46.799999,0,Exclude,Include
+27,Chirinos_6,2022,1,TRAINING trial subgroup,36,0,Exclude,Include
+28,Chirinos_6,2022,11,TRAINING trial subgroup,31.200001,0,Exclude,Include
+29,Codina,2021,1,REGI-UNIC,12,0,Include,Include
+30,Codina,2021,1,REGI-UNIC,36,0,Include,Include
+31,Codina,2023,1,LEVO-D,12,0,Include,Include
+32,Conners,2023,1,Rochester Epidemiology Project,36,1,Exclude,Exclude
+33,Denardo,2016,11,North Florida-South Georgia Veterans Affairs Medical Center,12,0,Exclude,Include
+34,Docherty,2022,1,DAPA-HF,18.200001,0,Exclude,Include
+35,Ezekowitz,2021,1,VICTORIA RCT,12,0,Include,Exclude
+36,Fastner_1,2021,1,"MAINTAINED, all patients",12,1,Exclude,Exclude
+37,Fastner_1,2021,1,"MAINTAINED, all patients",36,1,Exclude,Exclude
+38,Fastner_1,2021,1,"MAINTAINED, all patients",60,1,Exclude,Exclude
+39,Fastner_2,2021,1,MAINTAINED - ischemic cardiomyopathy subgroup,36,1,Exclude,Exclude
+40,Fastner_3,2021,1,MAINTAINED - non-ischemic cardiomyopathy subgroup,36,1,Exclude,Exclude
+41,Freitas,2017,1,Hospital de Santa Cruz,12,0,Include,Include
+42,Freitas,2017,1,Hospital de Santa Cruz,24,0,Include,Include
+43,Freitas,2017,2,Hospital de Santa Cruz,12,1,Exclude,Exclude
+44,Freitas,2017,2,Hospital de Santa Cruz,24,1,Exclude,Exclude
+45,Freitas,2017,9,Hospital de Santa Cruz,12,1,Exclude,Exclude
+46,Freitas,2017,9,Hospital de Santa Cruz,24,1,Exclude,Exclude
+47,Gama,2023,2,"Hospital Santa Cruz, Centro Hospitalar Lisboa Ocidental, Canraxide, Portugal",24,0,Exclude,Include
+48,Gama,2023,6,"Hospital Santa Cruz, Centro Hospitalar Lisboa Ocidental, Canraxide, Portugal",24,1,Exclude,Exclude
+49,Ivanov,2017,1,New York Methodist Hospital,26,0,Exclude,Include
+50,Kanagala,2021,1,Developing Imaging And plasMa biOmarkers iN Describing HFpEF (DIAMOND-HFpEF) study,46.900002,1,Exclude,Exclude
+51,Kaye,2019,1,REDUCE LAP-HF,36,1,Exclude,Exclude
+52,Khanam,2018,1,KorAHF,12,0,Exclude,Include
+53,Kim,2021,1,KorAHF,24,0,Exclude,Include
+54,Kim,2021,1,KorAHF,36,0,Exclude,Include
+55,La Rovere,2015,1,"Fondazione âSalvatore Maugeriâ, Istituto di Ricovero e Cura a Carattere Scientifico (IRCCS)",12,0,Exclude,Include
+56,Lauder,2023,1,PRELIEVE study,12,0,Include,Exclude
+57,Leong,2023,1,Global Congestive Heart Failure (G-CHF) registry,37.200001,0,Exclude,Include
+58,Malinowska-Borowska,2023,1,Prospective Registry of Heart Failure of the Silesia University Department,36,0,Include,Exclude
+59,Manculu,2019,1,Subgroup of RAFT,40,1,Exclude,Exclude
+60,McGranaghan,2021,1,CIBIS-ELD,36,0,Exclude,Include
+61,Michaels_1,2020,1,Henry Ford Health System - hospitalised,12,0,Include,Include
+62,Michaels_2,2020,1,Henry Ford Health System - ambulatory,12,0,Include,Include
+63,Muser,2019,2,Hospital of Univ of Pennsylvania,12,1,Exclude,Exclude
+64,Navarta,2018,1,Hospitals in Buenos Aires,12,0,Include,Include
+65,Nguyen,2018,1,CRISTAL database,12,0,Exclude,Include
+66,Pavlovskaya,2023,2,Almazov National Medical Research Centre,12,0,Include,Exclude
+67,Pavlovskaya,2023,2,Almazov National Medical Research Centre,36,0,Include,Exclude
+68,Perez-Sanz,2023,1,Tertiary hospital emergency department in Spain,12,0,Exclude,Include
+69,Perez-Sanz,2023,1,Tertiary hospital emergency department in Spain,36,0,Exclude,Include
+70,Pocock,2013,1,MAGGIC,36,0,Include,Exclude
+71,Quan,2022,1,Multi centre registry study in China,36,0,Exclude,Include
+72,Rich,2018,1,Northwestern University HFpEF Program,12,1,Exclude,Exclude
+73,Rich,2018,1,Northwestern University HFpEF Program,36,1,Exclude,Exclude
+74,Rich,2018,1,Northwestern University HFpEF Program,43.200001,0,Exclude,Include
+75,Rodrigues_1,2023,1,"Cardiology Department, Santa Maria University Hospital",12,1,Exclude,Exclude
+76,Rodrigues_2,2023,1,"Cardiology Department, Santa Maria University Hospital",12,0,Exclude,Include
+77,Rohde,2021,1,PARADIGM-HF & PARAGON-HF,32.099998,1,Exclude,Exclude
+78,Safiullina,2023,1,"National Medical Research Centre, Moscow",12,1,Exclude,Exclude
+79,Safiullina,2023,1,"National Medical Research Centre, Moscow",24,1,Exclude,Exclude
+80,Safiullina,2023,1,"National Medical Research Centre, Moscow",36,1,Exclude,Exclude
+81,Sartipy,2014,1,RiksSvikt Swedish HF registry,36,0,Include,Include
+82,Sawano,2018,1,WET-HF,12,0,Include,Include
+83,Schau,2016,1,Heart Center Brandenburg,12,1,Exclude,Exclude
+84,Scrutinio,2020,6,"University of Bari, Italy",30,0,Exclude,Include
+85,Seo,2020,1,PURSUIT-HFpEF study,12,1,Exclude,Exclude
+86,Simpson_1,2015,1,PARADIGM-HF - LCZ696 arm,24,1,Exclude,Exclude
+87,Simpson_2,2015,1,PARADIGM-HF -Enalapril arm,24,1,Exclude,Exclude
+88,Sung,2023,1,"Pooled 2-center outpatient populations (MacKay Memorial Hospital, Taipei and Tamsui branches) receiving LCZ696 (sacubitril/valsartan)",20.9,1,Exclude,Exclude
+89,Szczurek,2018,1,Silesian Centre for Heart Diseases,12,0,Exclude,Include
+90,Szczurek-Wasilewicz,2022,5,Silesian Centre for Heart Diseases,12,0,Exclude,Include
+91,Szlacheta,2023,1,"Bytom University Hospital, Poland - registry of HF patients",36,0,Include,Include
+92,Takahama,2023,10,"National Cerebral and Cardiovascular Center, Japan",12,1,Exclude,Exclude
+93,Tohyama,2021,1,JROADHF,12,0,Include,Include
+94,Valsaraj_1,2023,1,Alberta HEART study database  - HFrEF subgroup,12,1,Exclude,Exclude
+95,Valsaraj_1,2023,1,Alberta HEART study database  - HFrEF subgroup,48,1,Exclude,Exclude
+96,Valsaraj_1,2023,1,Alberta HEART study database  - HFrEF subgroup,60,1,Exclude,Exclude
+97,Valsaraj_2,2023,1,Alberta HEART study database  - HFpEF subgroup,12,1,Exclude,Exclude
+98,Valsaraj_2,2023,1,Alberta HEART study database  - HFpEF subgroup,48,1,Exclude,Exclude
+99,Valsaraj_2,2023,1,Alberta HEART study database  - HFpEF subgroup,60,1,Exclude,Exclude
+100,Vishram-Nielsen,2020,1,Toronto General Hospital,12,0,Include,Include
+101,Vishram-Nielsen,2020,1,Toronto General Hospital,36,0,Include,Include
+102,Vishram-Nielsen,2020,5,Toronto General Hospital,12,1,Exclude,Exclude
+103,Vishram-Nielsen,2020,5,Toronto General Hospital,36,1,Exclude,Exclude
+104,Xu,2022,1,"Retrospective analysis of patients at the CHC International Hospital, China",12,0,Include,Include
+105,de Sousa,2021,1,Hospital SÃ£o Francisco Xavier,12,1,Exclude,Exclude
+106,de Sousa,2021,1,Hospital São Francisco Xavier,36,0,Include,Exclude
