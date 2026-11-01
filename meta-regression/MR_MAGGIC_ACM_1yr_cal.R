@@ -39,11 +39,11 @@ source(paste0(path1, path2, "cr_MAGGIC_calib_data."))
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
-table(dat$outcome, useNA = "always") # 29
+table(dat$outcome, useNA = "always") 
 
 # 2) horizon
 dat <- dat[which(dat$horizon==12),]
-table(dat$horizon, useNA = "always") #18
+table(dat$horizon, useNA = "always") 
 
 
 ################################################################################################
@@ -64,7 +64,7 @@ oe_all_log$sd1 <- dat$sd1
 # oe_all_log$horizon<- dat$horizon # this will be needed when working with all horizons
 
 oe_all_log <- oe_all_log[which(!is.na(oe_all_log$theta.se)),]   # remove NA SE(OE)
-nstudies <- nrow(oe_all_log) #18
+nstudies <- nrow(oe_all_log)
 
 summary(dat$sd1)
 
