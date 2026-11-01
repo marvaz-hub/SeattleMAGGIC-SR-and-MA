@@ -1,0 +1,117 @@
+Variables in datafiles for meta-analysis of performance measures 
+
+Contains data for all external validations that provide or may provide (subject to review) data for meta-analysis.
+
+
+lineno - this is used for linking files
+
+author - authors with numbers (e.g Fastner_1) are explained in data_name
+
+year = year of publication
+
+data_name = name of database or if there is none, name of the hospital
+
+id = modelID i.e SHFM or MAGGIC
+
+horizon
+
+outcome = outcome in numerical codes (same codes for SHFM and MAGGIC):
+1 ACM
+2 ACM or heart Tx
+3 ACM or urgent heart Tx
+4 ACM or hospitalisation
+5 ACM or heart Tx or LVAD
+6 ACM or urgent heart Tx or LVAD
+7 ACM or hosp for acute HF or urgent heart Tx
+8 ACM or ICD shock
+9 ACM or urgent heart Tx
+10 ACM or LVAD
+11 ACM or HF hosp
+
+HF type
+
+acuteHRtype
+
+chronicHFtype
+
+mean_fup = mean followup 
+sd_fup = SD of followup 
+med_fup = median followup
+_25q_fup = 25th quartile of followup 
+_75q_fup = 75th quartile of followup
+min_fup = min followup
+max_fup = max followup 
+pyears_fup = person years
+
+sample_n_model = sample size used for the model (ie after any exclusions)
+sample_e_model = number of events used for the model (they could be less if complete data used and people with outcomes excluded due to this)
+
+extva_dis_cstat_val = external validation c-statistic value
+extva_dis_cstat_lci = external validation c-statistic lower bound of 95%CI
+extva_dis_cstat_uci = external validation c-statistic upper bound of 95%CI
+extva_dis_cstat_se = external validation c-statistic standard error
+extva_dis_cstat_p = external validation c-statistic p-value
+
+extva_dis_auc_val = external validation auc value
+extva_dis_auc_lci = external validation auc lower bound of 95%CI
+extva_dis_auc_uci = external validation auc upper bound of 95%CI
+extva_dis_auc_se = external validation auc standard error
+extva_dis_auc_p = external validation auc p-value
+
+OErat_v = O/E ratio value
+OErat_l = lower limit of 95% confidence interval for the O/E ratio
+OErat_u = upper limit of 95% confidence interval for the O/E ratio
+OErat_p = p-value for the O/E ratio
+
+mean1 = mean age 
+sd1 = SD of age
+median1 = median age
+_25q1 = 25th quartile of age
+_75q1 = 75th quartile of age
+min1 = min age
+max1 = max age
+
+female = proportion female
+
+noofpreds = number of PRAISE predictors reported (range 1-14) 
+noofpreds2 = number of reported predictors for the Levy 2006 external validation version (range 1-21)
+noofpreds3 = number of reported predictors for the Levy 2006 external validation version minus the devices (range 1-18)
+
+indexscore = this variable is to differentiate between the types of "final" model being validated, i.e. nomogram or full model or simplified score
+
+toestD = Initial status of investigation into estimates of discrimination (Estimates not required/Checking other data/Estimates are possible/Exclude)
+toestC = Initial status of investigation into estimates of calibration (Estimates not required/Checking other data/Estimates are possible/Exclude)
+
+Sensitivity analysis COVER dimensions:
+popul = Participants
+casemix = Casemix
+indep = Independence of researchers
+outc = Outcome 
+horiz = Horizon
+cal = Calibration
+disc = Discrimination 
+model_f = Model format and weight 
+model_p = Model predictors
+
+anyhighROB = At least one high ROB PROBAST domain 
+
+Subgroup analysis COVER variables:
+S1 = Heart failure type: chronic vs mixed vs acute
+S2 = By prediction horizon (integer multiples of 12 only)
+S3 = Calibration estimate
+S4 = Discrimination measure type: c-statistic vs area under the curve 
+S5 = By version of model 
+
+Versions are for MAGGIC: Dropped predictors (various, so not a proper subgroup); Original (2 points if HF duration < or <=18mths); Original derivation study; 
+Unclear (contradiction); Unclear(maybe a contradiction); Unclear  (reference only); Update (2 points if HF duration > or >=18mths)  
+Versions were deduced by: comments by authors; timing of the publication relative to timing of calculation; how the categorical variable of HF duration was reported
+in the baseline table or how the authors listed the predictors
+
+Versions are for SHFM: Added BB; Added CRT; Dropped predictors (various, so not a proper subgroup); Levy 2006 PRAISE predictors only; 
+Levy 2006 external validation predictors (with devices and drugs and coeffs from other studies); Post-2015 update
+Versions were deduced by: comments by authors; predictor lists given by authors; numbers of PRAISE predictors that were reported, 
+number of predictors in the external validations of Levy 2006 and how these two numbers compared (if equal=> PRAISE version; if latter is higher =>
+Levy 2006 external validation version); post-2015 version was deduced by the combination timing of the publication, comments by the authors and 
+whether IABP/Vent/UF were reported at baseline.
+
+
