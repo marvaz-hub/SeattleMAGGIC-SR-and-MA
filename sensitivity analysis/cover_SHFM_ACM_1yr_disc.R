@@ -25,7 +25,7 @@ library("dplyr")
 
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for discrimination 
 source(paste0(path1, path2, "cr_SHFM_disc_data.R"))
@@ -43,7 +43,9 @@ source(paste0(path1, path2, "fn_ma_cstat.R"))
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
-table(dat$outcome, useNA = "always") 
+table(dat$outcome, useNA = "always") #57
+# 1    5    9 <NA> 
+# 57    4    1    0 
 
 # 2) horizon
 dat <- dat[which(dat$horizon==12),]
@@ -84,9 +86,28 @@ dim(dat4) #5
 dat5 <- dat[which(dat$int_valid!="02"),]
 
 
+# Extra sensitivity analysis in response to SR journal reviewers' comments (15/02/2026)
+# 6. Exclude approximated ACM (outc==”E6”). 
+#  dat[which(dat$outc=="E6"),]
+#Levy 2006 PRAISE1 lineno 83 12 months outcome 5
+#Levy_5 2006 RENNAISANCE lineno 101 12 months outcome 5
+dat6 <- dat[which(dat$outc!="E6"),]
+
+
+### NEW October 2026
+### 7) Sensitivity analysis based on PROBAST's Applicability concern (app_overall_s)
+table(dat$app_overall_s, useNA = "always")
+# high     low unclear    <NA> 
+#   10      16       8       0 
+# 7a.Exclude estimates with high Applicability concern 
+dat7a <- dat[which(dat$app_overall_s!="high"),]
+dim(dat7a) #24
+# 7b.Exclude estimates with high and unclear Applicability concern
+dat7b <- dat[which(dat$app_overall_s=="low"),]
+dim(dat7b) #16
 
 ################################################################################################
-###########     GROUP 1 #############
+###########     SA 1 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -110,7 +131,7 @@ resS_disc_ACM_1yr_cover1 <- c(rep("-",5), fn_ma_cstat(dat)[[2]]$n, "-") #fn_ma_c
 
 
 ################################################################################################
-###########     GROUP 2 #############
+###########     SA 2 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -134,7 +155,7 @@ plot(cstat_all_forest)
 
 
 ################################################################################################
-###########     GROUP 3 #############
+###########     SA 3 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -158,7 +179,7 @@ resS_disc_ACM_1yr_cover3 <- fn_ma_cstat(dat)[[2]] #c(rep("-",5), fn_ma_cstat(dat
 
 
 ################################################################################################
-###########     GROUP 4 #############
+###########     SA 4 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -182,7 +203,7 @@ resS_disc_ACM_1yr_cover4 <- fn_ma_cstat(dat)[[2]] #fn_ma_cstat(dat)[[2]])
 
 
 ################################################################################################
-###########     GROUP 5 #############
+###########     SA 5 #############
 ################################################################################################
 
 ## ** UPDATE DATABASE AND NAME OF VARIBLE **
@@ -205,3 +226,79 @@ plot(cstat_all_forest)
 resS_disc_ACM_1yr_cover5 <- fn_ma_cstat(dat)[[2]] #fn_ma_cstat(dat)[[2]])  
 
 resS_disc_ACM_1yr_cover5
+
+
+################################################################################################
+###########     SA 6  ############# (15/01/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat6 
+
+cstat_all <- ccalc(cstat= extva_dis_cstat_val, cstat.se= extva_dis_cstat_se, 
+                   cstat.cilb=extva_dis_cstat_lci, cstat.ciub = extva_dis_cstat_uci,
+                   N = sample_n_model, O = o.est, data=dat, slab=study_id)
+
+# create a dataframe for forest plot
+cstat_all$n      <- dat$sample_n_model
+cstat_all$events <- round(dat$o.est,0)
+cstat_all$id     <- dat$authoryear
+cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
+dim(cstat_all_forest) ## 2
+plot(cstat_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+resS_disc_ACM_1yr_cover6 <- fn_ma_cstat(dat)[[2]] #fn_ma_cstat(dat)[[2]])  
+
+resS_disc_ACM_1yr_cover6
+
+
+
+################################################################################################
+###########     SA 7a  ############# (25/10/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat7a 
+
+cstat_all <- ccalc(cstat= extva_dis_cstat_val, cstat.se= extva_dis_cstat_se, 
+                   cstat.cilb=extva_dis_cstat_lci, cstat.ciub = extva_dis_cstat_uci,
+                   N = sample_n_model, O = o.est, data=dat, slab=study_id)
+
+# create a dataframe for forest plot
+cstat_all$n      <- dat$sample_n_model
+cstat_all$events <- round(dat$o.est,0)
+cstat_all$id     <- dat$authoryear
+cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
+dim(cstat_all_forest) ## 2
+plot(cstat_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+(resS_disc_ACM_1yr_cover7a <- fn_ma_cstat(dat)[[2]]) #fn_ma_cstat(dat)[[2]])  
+
+
+################################################################################################
+###########     SA 7b  ############# (25/10/2026)
+################################################################################################
+
+## ** UPDATE DATABASE AND NAME OF VARIBLE **
+
+dat <- dat7b 
+
+cstat_all <- ccalc(cstat= extva_dis_cstat_val, cstat.se= extva_dis_cstat_se, 
+                   cstat.cilb=extva_dis_cstat_lci, cstat.ciub = extva_dis_cstat_uci,
+                   N = sample_n_model, O = o.est, data=dat, slab=study_id)
+
+# create a dataframe for forest plot
+cstat_all$n      <- dat$sample_n_model
+cstat_all$events <- round(dat$o.est,0)
+cstat_all$id     <- dat$authoryear
+cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
+dim(cstat_all_forest) ## 2
+plot(cstat_all_forest)
+
+# funtion that returns a df with c("est","ci.lb","ci.ub","pi.lb","pi.ub","n","tau2")
+(resS_disc_ACM_1yr_cover7b <- fn_ma_cstat(dat)[[2]]) #fn_ma_cstat(dat)[[2]])  
+
