@@ -49,12 +49,11 @@ pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
-table(dat$outcome, useNA = "always") # 45 
+table(dat$outcome, useNA = "always")  
 
 # 2) horizon
 dat <- dat[which(dat$horizon==12),]
-table(dat$horizon, useNA = "always") #23
-
+table(dat$horizon, useNA = "always")
 
 
 ################################################################################################
@@ -70,7 +69,7 @@ cstat_all$n      <- dat$sample_n_model
 cstat_all$events <- round(dat$o.est,0)
 cstat_all$id     <- dat$authoryear
 cstat_all_forest <- cstat_all[which(!is.na(cstat_all$theta.se)),]
-dim(cstat_all_forest) ## 23
+dim(cstat_all_forest) 
 #plot(cstat_all_forest)
 
 
@@ -94,8 +93,3 @@ res <- fn_ma_cstat(dat)[[3]]
 #png(paste0(pathfig, figfile), width = 1100, height = 900)
 fn_forest_disc(cstat_all_forest,estimates,titplot,weights_all,tau_all,res)
 #dev.off()
-
-
-
-
-
