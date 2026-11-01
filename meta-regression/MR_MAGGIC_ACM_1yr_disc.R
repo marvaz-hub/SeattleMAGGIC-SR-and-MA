@@ -39,11 +39,11 @@ source(paste0(path1, path2, "cr_MAGGIC_disc_data.R"))
 
 # 1) choose outcome ACM and approx ACM (outc==”E6”)
 dat <- df_ma[which(df_ma$outcome==1 | (df_ma$outc=="E6" & df_ma$outcome!=1)),]
-table(dat$outcome, useNA = "always") # 45 
+table(dat$outcome, useNA = "always") 
 
 # 2) horizon
 dat <- dat[which(dat$horizon==12),]
-table(dat$horizon, useNA = "always") #23
+table(dat$horizon, useNA = "always") 
 
 
 #################################################################################
@@ -65,7 +65,7 @@ cstat_all_log$sd1 <- dat$sd1
 # remove NA SE(cstat)
 cstat_all_log <- cstat_all_log[which(!is.na(cstat_all_log$theta.se)),]  
 
-nstudies  <- nrow(cstat_all_log) #23
+nstudies  <- nrow(cstat_all_log) 
 
 #inspect
 # cstat_all_log
