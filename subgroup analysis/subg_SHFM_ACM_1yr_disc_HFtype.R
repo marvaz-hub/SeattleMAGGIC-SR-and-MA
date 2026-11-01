@@ -25,27 +25,28 @@ library("XLConnect")
 library("dplyr")
 
 path1 = # INSERT PATHWAY TO DIRECTORY CONTAINING THE SUBFOLDERS
-path2 = "subscripts/"
+  path2 = "subscripts/"
 
 ## Data for discrimination 
- source(paste0(path1, path2, "cr_SHFM_disc_data.R"))
+source(paste0(path1, path2, "cr_SHFM_disc_data.R"))
 
 ## Function to get pooled estimates for cstat
- source(paste0(path1, path2, "fn_ma_cstat.R"))
+source(paste0(path1, path2, "fn_ma_cstat.R"))
 
 ## Function to add Q-test, I^2, and tau^2 estimate info
- source(paste0(path1, path2, "fn_forestplot_mlab.r"))
+source(paste0(path1, path2, "fn_forestplot_mlab.r"))
 titplot <- "SHFM" #" 1-year ACM"
 figfile <- "Fig2f_S_1yr_ACMapprox_disc_HFtype.jpg"
-pathfig <- # INSERT THE PATH WHERE YOU WANT TO SAVE THE FIGURES
+pathfig <- "C:/Users/mvazquezmontes/OneDrive - Nexus365/Documents/SHFM and MAGGIC/Analysis files/RCode/figures/"
+
 
 #################################################################################
 ### SUBGROUP
 ### •	HF type chronic vs acute vs mixed/unclear (S1)
 #################################################################################
 table(df_ma$S1,useNA = "always")
-  #       Acute Chronic   Mixed    <NA> 
-  # 21       8      60       6       0  
+#       Acute Chronic   Mixed    <NA> 
+# 21       8      60       6       0  
 
 df_ma$S1[nchar(df_ma$S1)==0] <- "Unclear/Mixed"
 df_ma$S1[df_ma$S1 == "Mixed"] <- "Unclear/Mixed"
@@ -271,7 +272,7 @@ res <- rma(yi=theta, sei=theta.se, mods = ~ S1, data=cstat_all_log, method="REML
 
 ### add text for the test of subgroup differences
 par(op)
-text(-0.3, -3.5, pos=4, bquote(paste("Test for Subgroup Differences: ",
+text(-0.3, -3.5, pos=4, bquote(paste("Test for Moderator Effect: ",
                                      Q[M], " = ", .(fmtx(res$QM, digits=2)),
                                      ", df = ", .(res$p - 1), ", ",
                                      .(fmtp(res$QMp, digits=3, pname="p", add0=TRUE, sep=TRUE, equal=TRUE)))))
